@@ -3,15 +3,22 @@ using namespace std;
 
 
 
-int fibonacci(int n){
-    if(n == 0 || n == 1){
-        return n;
-    }
-    return fibonacci(n-1) + fibonacci(n-2);
-}   
+class Person{
+        string name;
+        int age;
+    public:
+        Person(string name, int age){
+            this->name = name;
+            this->age = age;
+        }
 
+        void display(){
+            cout << name << " " << age << endl;
+        }
+};
 
 int main(){
-    cout << fibonacci(5);
+    Person p1("Shmuli", 20);
+    p1.display();
     return 0;
 }
